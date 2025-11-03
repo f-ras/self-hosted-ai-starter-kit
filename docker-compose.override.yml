@@ -1,0 +1,5 @@
+# Overwrite Coolify OLLAMA_HOST global env var. Needs to be empty for ollama to run.
+services:
+  ollama-cpu:
+    environment:
+      - OLLAMA_HOST=
