@@ -1,5 +1,17 @@
-# Overwrite Coolify OLLAMA_HOST global env var. Needs to be empty for ollama to run.
 services:
+
+  n8n:
+    environment:
+      - OLLAMA_HOST=ollama-cpu:11434
+
+  n8n-import:
+    environment:
+      - OLLAMA_HOST=ollama-cpu:11434
+
   ollama-cpu:
     environment:
       - OLLAMA_HOST=0.0.0.0
+
+  ollama-pull-llama-cpu:
+    environment:
+      - OLLAMA_HOST=ollama-cpu:11434
