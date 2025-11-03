@@ -1,0 +1,20 @@
+# .github/workflows/sync.yml
+
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # This runs at midnight UTC every day
+  workflow_dispatch:      # This adds a manual "Run" button
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: tgymnich/fork-sync@v2.0
+        with:
+          owner: n8n-io          # The original repo owner
+          base: main             # The original repo branch
+          head: main             # Your fork's branch
+          ignore_fail: true      # Don't fail the action if there's nothing to sync
+          force: true            # Force push the update to your branch
