@@ -3,6 +3,12 @@ services:
     environment:
       - OLLAMA_HOST=ollama-cpu:11434
     user: "root"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5678/healthz || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 300s
 
   n8n-import:
     environment:
@@ -17,3 +23,4 @@ services:
   ollama-pull-llama-cpu:
     environment:
       - OLLAMA_HOST=ollama-cpu:11434
+    restart: "no"
