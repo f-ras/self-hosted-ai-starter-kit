@@ -1,13 +1,13 @@
 services:
 
-  n8n:
+n8n:
     environment:
       - OLLAMA_HOST=ollama-cpu:11434
 
   n8n-import:
     environment:
       - OLLAMA_HOST=ollama-cpu:11434
-      user: "root"
+    user: "root"
 
   ollama-cpu:
     environment:
