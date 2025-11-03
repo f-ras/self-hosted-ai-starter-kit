@@ -8,6 +8,7 @@ services:
     environment:
       - OLLAMA_HOST=ollama-cpu:11434
     user: "root"
+    restart: "no"
 
   ollama-cpu:
     environment:
