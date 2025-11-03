@@ -16,8 +16,7 @@ services:
       - /data/coolify/applications/tkoc0kgsco4ssg8cw44okks0/self-hosted-ai-starter-kit/n8n/demo-data:/demo-data
 
   qdrant:
-    ports:
-      - "127.0.0.1:6333:6333" # <-- Secures the 6333 port to localhost-only
+    ports: [] # <-- Closes the insecure 6333 port
 
   ollama-cpu:
     environment:
