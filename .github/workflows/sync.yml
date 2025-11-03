@@ -17,4 +17,3 @@ jobs:
           base: main             # The original repo branch
           head: main             # Your fork's branch
           ignore_fail: true      # Don't fail the action if there's nothing to sync
-          force: true            # Force push the update to your branch
