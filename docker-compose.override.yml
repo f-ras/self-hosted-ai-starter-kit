@@ -2,4 +2,4 @@
 services:
   ollama-cpu:
     environment:
-      - OLLAMA_HOST=
+      - OLLAMA_HOST=0.0.0.0
