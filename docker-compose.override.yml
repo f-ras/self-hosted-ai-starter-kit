@@ -3,16 +3,26 @@ services:
     environment:
       - OLLAMA_HOST=ollama-cpu:11434
     user: "root"
+    ports: [] # <-- Closes the insecure 5678 port
 
   n8n-import:
     environment:
       - OLLAMA_HOST=ollama-cpu:11434
     user: "root"
     restart: "no"
+    volumes:
+      # Custom path to access n8n starter-kit demo files:
+      # - /data/coolify/applications/<YOUR_APP_UUID>/<YOUR_REPO_NAME>/n8n/demo-data:/demo-data
+      - /data/coolify/applications/tkoc0kgsco4ssg8cw44okks0/self-hosted-ai-starter-kit/n8n/demo-data:/demo-data
+
+  qdrant:
+    ports:
+      - "127.0.0.1:6333:6333" # <-- Secures the 6333 port to localhost-only
 
   ollama-cpu:
     environment:
       - OLLAMA_HOST=0.0.0.0
+    ports: [] # <-- Closes the insecure 11434 port
 
   ollama-pull-llama-cpu:
     environment:
