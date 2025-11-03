@@ -12,8 +12,8 @@ services:
     restart: "no"
     volumes:
       # Custom path to access n8n starter-kit demo files:
-      # - /data/coolify/applications/<YOUR_APP_UUID>/<YOUR_REPO_NAME>/n8n/demo-data:/demo-data
-      - /data/coolify/applications/tkoc0kgsco4ssg8cw44okks0/self-hosted-ai-starter-kit/n8n/demo-data:/demo-data
+      # - /data/coolify/applications/<YOUR_APP_UUID>/n8n/demo-data:/demo-data
+      - /data/coolify/applications/tkoc0kgsco4ssg8cw44okks0/n8n/demo-data:/demo-data
 
   qdrant:
     ports: [] # <-- Closes the insecure 6333 port
