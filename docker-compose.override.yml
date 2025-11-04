@@ -1,11 +1,13 @@
 services:
   n8n:
+    env_file: [] # <-- Disables .env for n8n (in Coolify only)
     environment:
       - OLLAMA_HOST=ollama-cpu:11434
     user: "root"
     ports: [] # <-- Closes the insecure 5678 port
 
   n8n-import:
+    env_file: [] # <-- Disables .env for n8n-import (in Coolify only)
     environment:
       - OLLAMA_HOST=ollama-cpu:11434
     user: "root"
