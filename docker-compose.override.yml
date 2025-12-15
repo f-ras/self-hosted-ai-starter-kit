@@ -15,7 +15,7 @@ services:
     volumes:
       # Custom path to access n8n starter-kit demo files:
       # - /data/coolify/applications/<YOUR_APP_UUID>/n8n/demo-data:/demo-data
-      - /data/coolify/applications/ncs4csk444wsoww4o0g4kw0w/n8n/demo-data:/demo-data
+      - /data/coolify/applications/ywkwg4g8go8s04o80c84w00o/n8n/demo-data:/demo-data
 
   qdrant:
     ports: [] # <-- Closes the insecure 6333 port
